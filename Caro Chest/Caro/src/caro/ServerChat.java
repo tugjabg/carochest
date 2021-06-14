@@ -27,7 +27,6 @@ public class ServerChat {
 
         catch(Exception e)
         {
-            System.out.println("Exception caught in main due to user connection loss...");
         }
     }
 
@@ -66,7 +65,6 @@ public class ServerChat {
 
             bos.write(mybytearray, 0 , current);
             bos.close();
-            System.out.println("File " + FILE_TO_RECEIVED+ " downloaded (" + current + " bytes read)");
         }
         catch(Exception e){}
     }
@@ -114,6 +112,7 @@ class user extends Thread
             try
             {
                 message = userDIS.readUTF();
+                // chuỗi ký tự dùng để thông báo từ client là muốn tham gia chat
                 if(message.equals("46511231dsfdsfsd#@$#$#@^$%#@*$#^"))
                     tirth.receiveAndSendFileToAll(userSocket, userID);
                 else

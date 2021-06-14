@@ -1,10 +1,5 @@
 package caro;
 
-/*
- @author VanNinh Main.java : là đối tượng chạy chính , quyết định "cảnh game"
-  hiện hành
- 
- */
 import javax.swing.JFrame;
 import javax.swing.UIManager;
 import java.io.IOException;

@@ -1,9 +1,5 @@
 package caro;
 
-/**
- *
- * @author VanNinh
- */
 public class EvalBoard {
 
     public int height, width;

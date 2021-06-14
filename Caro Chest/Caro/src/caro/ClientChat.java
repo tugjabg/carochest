@@ -43,25 +43,24 @@ public class ClientChat {
 
     public static void main(final String args[]) throws IOException
     {
-        JFrame frame1 = new JFrame("Login to LAN Chat & File Sharing");
-        JFrame frame2 = new JFrame("LAN Chat & File Sharing");
-        JFrame frame3 = new JFrame("Choose a file to send");
+        JFrame frame1 = new JFrame("Cuộc trò chuyện");
+        JFrame frame2 = new JFrame("Gửi");
 
 
 //----------------------------------------------------------------
 //---------------------- FRAME 2----------------------------------
 //----------------------------------------------------------------
 
-        frame2.setSize(500,700);
+        frame2.setSize(400,600);
         frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame2.setLayout(new GridBagLayout());
 
 
-        JLabel helloUser = new JLabel("Hello and Welcome !");
+        JLabel helloUser = new JLabel("Xin chào !");
         frame2.add(helloUser, new GridBagConstraints(0,0,1,1,3,1,GridBagConstraints.CENTER,            GridBagConstraints.BOTH,new Insets(0,0,0,0),0,0));
 
 
-        JButton logOutButton = new JButton("Logout");
+        JButton logOutButton = new JButton("Đăng xuất");
         frame2.add(logOutButton, new GridBagConstraints(2,0,1,1,.25,1,GridBagConstraints.CENTER,            GridBagConstraints.BOTH,new Insets(0,0,0,0),0,0));
 
 
@@ -75,7 +74,7 @@ public class ClientChat {
 
 
 
-        JButton send = new JButton("send");
+        JButton send = new JButton("Gửi");
         frame2.add(send, new GridBagConstraints(1,2,1,1,.25,.25,GridBagConstraints.CENTER,            GridBagConstraints.BOTH,new Insets(0,0,0,0),0,0));
         send.addActionListener(new ActionListener()
         {
@@ -93,40 +92,22 @@ public class ClientChat {
 
 
 
-        JButton sendFile = new JButton("Send File");
-        frame2.add(sendFile, new GridBagConstraints(2,2,1,1,.25,.25,GridBagConstraints.CENTER,            GridBagConstraints.BOTH,new Insets(0,0,0,0),0,0));
-        sendFile.addActionListener(new ActionListener()
-        {
-            public void actionPerformed(ActionEvent sendFileButtonClick)
-            {
-                frame3.setVisible(true);
-            }
-        });
-//----------------------------------------------------------------
-//---------------------- FRAME 2 ends ----------------------------
-//----------------------------------------------------------------
-
-
-
-//----------------------------------------------------------------
-//------------------------ FRAME 1 -------------------------------
-//----------------------------------------------------------------
 
         frame1.setLayout(new GridBagLayout());
 
-        frame1.setSize(500,700);
+        frame1.setSize(400,600);
         frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 
         //----For bg image-----------
-        JLabel background=new JLabel(new ImageIcon("logo.png"),JLabel.CENTER);
+        JLabel background=new JLabel(new ImageIcon("src/logo.png"),JLabel.CENTER);
         frame1.add(background, new GridBagConstraints(0,0,1,1,2.0,1.0,GridBagConstraints.CENTER,            GridBagConstraints.BOTH,new Insets(0,0,0,0),0,0));
         //---------------------------
 
 
 
         //------Label-----------------
-        JLabel enter = new JLabel("Enter your name");
+        JLabel enter = new JLabel("Nhập vào tên của bạn");
         frame1.add(enter, new GridBagConstraints(0,2,1,1,1.0,1.0,GridBagConstraints.CENTER,            GridBagConstraints.NONE,new Insets(0,0,0,0),0,0));
         //----------------------------
 
@@ -138,7 +119,7 @@ public class ClientChat {
 
 
         //-------Login Button-------------
-        JButton login = new JButton("Join chat");
+        JButton login = new JButton("Tham gia cuộc trò chuyện");
         frame1.add(login, new GridBagConstraints(0,4,1,1,1.0,1.0,GridBagConstraints.CENTER,            GridBagConstraints.NONE,new Insets(0,0,0,0),0,0));
 
         login.addActionListener(new ActionListener()
@@ -146,7 +127,7 @@ public class ClientChat {
             public void actionPerformed(ActionEvent buttonClick)
             {
                 username = usernameTextArea.getText();
-                helloUser.setText("Hello "+username+". Welcome !");
+                helloUser.setText("Xin chào "+username+"!");
                 frame1.setVisible(false);
 
                 try
@@ -164,7 +145,7 @@ public class ClientChat {
 
                 catch(IOException e)
                 {
-                    System.out.println("Server unavailable to connect. Press Ctrl+C to exit..");
+                    System.out.println("Server chưa khởi động");
                 }
             }
         });
@@ -182,12 +163,9 @@ public class ClientChat {
 //----------------------------------------------------------------
 //---------------------- FRAME 3 ---------------------------------
 //----------------------------------------------------------------
-        frame3.setSize(500,700);
-        frame3.setLayout(new GridBagLayout());
 
 
         JFileChooser fileSelector = new JFileChooser();
-        frame3.add(fileSelector, new GridBagConstraints(1,0,1,1,.25,.25,GridBagConstraints.CENTER,            GridBagConstraints.BOTH,new Insets(0,0,0,0),0,0));
         fileSelector.addActionListener(new ActionListener()
         {
             public void actionPerformed(ActionEvent fileChooserEvent)
@@ -196,7 +174,6 @@ public class ClientChat {
                 if(command.equals(JFileChooser.APPROVE_SELECTION))
                 {
                     File fileToBeSent = fileSelector.getSelectedFile();
-                    frame3.setVisible(false);
 
                     try{
                         byte [] fileByteArray  = new byte [(int)fileToBeSent.length()];
@@ -220,7 +197,7 @@ public class ClientChat {
 
 
                     }
-                    catch(Exception e){}
+                    catch(Exception ignored){}
 
                 }
             }
@@ -305,7 +282,7 @@ public class ClientChat {
 class boss extends Thread
 {
     DataInputStream disServer;
-    String secretCode = new String("46511231dsfdsfsd#@$#$#@^$%#@*$#^");
+    String secretCode = "46511231dsfdsfsd#@$#$#@^$%#@*$#^";
 
     public boss(DataInputStream z)
     {
