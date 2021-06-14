@@ -14,7 +14,6 @@ import javax.swing.JOptionPane;
 
 /*
  *
- * @author VanNinh
  *
  * Client gửi các tin nhắn đến server: 
     MOVE
@@ -245,9 +244,6 @@ public class Client {
         }
     }
 
-    /*
-     * The methord: Do you want restart game?
-     */
     public boolean wantsToPlayAgain() {
 
         int response = JOptionPane.showConfirmDialog(null,
@@ -258,9 +254,5 @@ public class Client {
         return response == JOptionPane.YES_OPTION;
 
     }
-
-    /**
-     * Runs the client as an application.
-     */
    
 }

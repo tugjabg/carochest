@@ -17,26 +17,15 @@ public class Main {
 
         startGame = true; // đánh dấu game đã bắt đầu 
 
-      
-        
         //  Khởi tạo cửa sổ Game
          
-        myFrame = new JFrame("Game");
+        myFrame = new JFrame("Trò chơi");
         myFrame.setResizable(false);
         myFrame.setVisible(true);
         myFrame.setLayout(null);
         myFrame.setBounds(100, 100, 800, 600);
         myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        // nhạc nền 
-        MusicPanel myMusicPanel = new MusicPanel();
-        myFrame.add(myMusicPanel);
-
-        // âm thanh 
-        SoundPanel mySoundPanel = new SoundPanel();
-
-        // thêm button  nhạc nền và âm thanh vào Frame chính 
-        myFrame.add(mySoundPanel);
         myFrame.repaint();
 
         // khởi chạy menu start game 
@@ -49,7 +38,7 @@ public class Main {
         ClientChat.main(args);
         try { // sử Jato libary có chức năng thay đổi giao diện game đẹp hơn 
             UIManager.setLookAndFeel("com.jtattoo.plaf.smart.SmartLookAndFeel");
-        } catch (Exception e) {
+            } catch (Exception e) {
         };
         Main myMain = new Main();
     }
