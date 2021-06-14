@@ -4,10 +4,7 @@ import java.io.*;
 import java.net.*;
 public class ServerChat {
     static ServerSocket ss;
-    static DataInputStream dis;
-    static DataOutputStream dos;
-    static Scanner in = new Scanner(System.in);
-    public static user users[] = new user[10];
+    public static User users[] = new User[10];
     public static int totalClientsOnline=0;
 
 
@@ -19,7 +16,7 @@ public class ServerChat {
 
             for(int i=0;i<10;i++)
             {
-                users[i] = new user(i+1,ss.accept());
+                users[i] = new User(i+1,ss.accept());
                 totalClientsOnline++;
             }
 
@@ -52,8 +49,8 @@ public class ServerChat {
         int bytesRead;
         int current = 0;
 
-        FileOutputStream fos = null;
-        BufferedOutputStream bos = null;
+        FileOutputStream fos;
+        BufferedOutputStream bos;
         byte [] mybytearray  = new byte [FILE_SIZE];
 
         try {
@@ -72,7 +69,7 @@ public class ServerChat {
 }
 
 
-class user extends Thread
+class User extends Thread
 {
     ServerChat tirth = new ServerChat();
     int userID;
@@ -83,7 +80,7 @@ class user extends Thread
     OutputStream os;
 
 
-    public user(int id,Socket a)
+    public User(int id,Socket a)
     {
         try
         {

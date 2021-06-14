@@ -13,7 +13,7 @@ public class ClientChat {
     static DataOutputStream dos;
     static DataInputStream dis;
     static Socket s;
-    static boss server;
+    static BossServer server;
     static String username;
 
 
@@ -96,7 +96,7 @@ public class ClientChat {
             dos = new DataOutputStream(s.getOutputStream());
             dis = new DataInputStream(s.getInputStream());
 
-            server = new boss(dis);
+            server = new BossServer(dis);
             Thread t = new Thread(server);
             t.start();
 
@@ -142,6 +142,8 @@ public class ClientChat {
                 }
             }
         });
+
+
     }
 
 
@@ -162,7 +164,7 @@ public class ClientChat {
             s = new Socket("192.168.0.101", 7777);
             dos = new DataOutputStream(s.getOutputStream());
             dis = new DataInputStream(s.getInputStream());
-            server = new boss(dis);
+            server = new BossServer(dis);
             Thread newConnection = new Thread(server);
             newConnection.start();
 
@@ -179,12 +181,12 @@ public class ClientChat {
 
 
 
-class boss extends Thread
+class BossServer extends Thread
 {
     DataInputStream disServer;
     String secretCode = new String("46511231dsfdsfsd#@$#$#@^$%#@*$#^");
 
-    public boss(DataInputStream z)
+    public BossServer(DataInputStream z)
     {
         disServer = z;
     }

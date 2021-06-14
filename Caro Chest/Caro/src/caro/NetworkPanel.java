@@ -21,7 +21,7 @@ public class NetworkPanel extends JPanel {
 
     ImagePanel background = new ImagePanel("picture/main.png", 0, 0, 800, 600);
 
-    public SoundPlayer mySoundPlayer = new SoundPlayer();
+
 
     public void addJoinButton() {
         joinButton = new JButton("Sẵn sàng");

@@ -42,7 +42,6 @@ public class Client {
     private ImagePanel currentSquare;
     public static BackButton myBackButton;
 
-    public SoundPlayer mySoundPlayer = new SoundPlayer();
     /*
       Các thuộc tính kết nối server :
      

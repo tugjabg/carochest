@@ -23,14 +23,10 @@ public class winnerFrame extends JFrame {
         else {
               winnerPicture = new ImagePanel("picture/winner"+winner+".gif", 0, 0, 400, 200) ; 
         }
-        
-      
-    
+
         JButton acceptButton = new JButton("Xác nhận") ; 
         acceptButton.setBounds(150, 170, 90, 25);
-        
-        SoundPlayer mySound = new SoundPlayer() ; // âm thanh
-       
+
         acceptButton.addActionListener(new ActionListener() {
 
             @Override
