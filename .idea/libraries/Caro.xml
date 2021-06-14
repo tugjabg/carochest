@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Caro">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Caro Chest/Caro/dist/Caro.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

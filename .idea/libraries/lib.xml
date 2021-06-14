@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Caro Chest/Caro/dist/lib/dnsjava-2.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Caro Chest/Caro/dist/lib/mp3spi1.9.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Caro Chest/Caro/dist/lib/jl1.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Caro Chest/Caro/dist/lib/JTattoo-1.6.8.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
