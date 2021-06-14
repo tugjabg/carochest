@@ -5,10 +5,6 @@ import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
-/**
- *
- * @author VanNinh
- */
 public class ImagePanel extends JPanel {
 
     private int width;

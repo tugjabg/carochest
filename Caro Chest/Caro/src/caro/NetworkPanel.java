@@ -7,10 +7,6 @@ import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-/**
- *
- * @author VanNinh
- */
 public class NetworkPanel extends JPanel {
 
     public static Client myClient;

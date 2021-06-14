@@ -4,10 +4,6 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.JPanel;
 
-/**
- *
- * @author VanNinh
- */
 public class GamePanel extends JPanel {
 
     public static int winner; // player 1 win -> 1 ;  player 2 win -> 2  ; computer win->3 ;draw ->0   

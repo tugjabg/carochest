@@ -6,10 +6,6 @@ import java.io.FileInputStream;
 import javax.swing.JOptionPane;
 import javazoom.jl.player.Player;
 
-/**
- *
- * @author VanNinh
- */
 public class SoundPlayer {
     private FileInputStream FIS  ; 
     private Player myPlayer ; 

@@ -7,10 +7,6 @@ import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
-/**
- *
- * @author VanNinh
- */
 public class BackButton extends JButton {
 
     String presentPanel;

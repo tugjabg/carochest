@@ -1,10 +1,5 @@
 
 package caro;
-
-/**
- *
- * @author VanNinh
- */
 public class StatusBoard {
     int height ; 
     private  int width ; 

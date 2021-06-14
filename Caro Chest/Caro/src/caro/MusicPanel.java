@@ -7,10 +7,6 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
-/**
- *
- * @author VanNinh
- */
 public class MusicPanel extends JPanel {
 
     public static BackgrondMusic myMusic;

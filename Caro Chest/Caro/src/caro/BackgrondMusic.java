@@ -4,10 +4,6 @@ import java.io.FileInputStream;
 import javax.swing.JPanel;
 import javazoom.jl.player.Player;
 
-/**
- *
- * @author VanNinh
- */
 public class BackgrondMusic extends JPanel {
 
     private int total;  // tổng số byte của file nhạc  

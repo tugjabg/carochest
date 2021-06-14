@@ -199,16 +199,6 @@ public class Computer {
 
     }
 
-//    public void printEvalBoard() {
-//        for (int row = 0; row < height; row++) {
-//            for (int col = 0; col < width; col++) {
-//                System.out.print(myEvalBoard.EBoard[row][col] + " ");
-//            }
-//            System.out.println(" ");
-//        }
-//        System.out.println("--------------------------------- ");
-//    }
-
     //Ham tim nuoc di cho may
     public void FindMove(int[][] status) {
 
