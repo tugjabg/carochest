@@ -16,8 +16,8 @@ public class StartPanel extends JPanel {
         ImagePanel background = new ImagePanel("picture/StartGame.png", 0, 0, 800, 600);
 
         //Thêm các button chức năng
-        JButton LANButton = new JButton("LAN game");
-        JButton exitButton = new JButton("Exit");
+        JButton LANButton = new JButton("Vào chơi");
+        JButton exitButton = new JButton("Thoát");
 
         // định vị trí các button
         LANButton.setBounds(350, 400, 100, 30);

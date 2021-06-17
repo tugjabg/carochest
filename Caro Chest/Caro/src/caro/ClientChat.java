@@ -46,7 +46,7 @@ public class ClientChat {
 //---------------------- FRAME 2----------------------------------
 //----------------------------------------------------------------
 
-        frame.setSize(400,600);
+        frame.setSize(350,450);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new GridBagLayout());
 
