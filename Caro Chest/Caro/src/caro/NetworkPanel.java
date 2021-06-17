@@ -21,8 +21,6 @@ public class NetworkPanel extends JPanel {
 
     ImagePanel background = new ImagePanel("picture/main.png", 0, 0, 800, 600);
 
-
-
     public void addJoinButton() {
         joinButton = new JButton("Sẵn sàng");
         joinButton.setBounds(50, 150 + 10, 100, 50);
@@ -30,9 +28,6 @@ public class NetworkPanel extends JPanel {
 
             @Override
             public void actionPerformed(ActionEvent ae) {
-
-                // player sound 
-//                if (GamePanel.canPlaySound) mySoundPlayer.playSound("sound/click.mp3");
 
                 //  tao thread  để quá trình kết nối song song với game
                 new Thread(new Runnable() {
